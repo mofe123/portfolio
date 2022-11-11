@@ -35,12 +35,58 @@
                 <img src="mypic.jpg" alt="me">
             </div>
             <div class="about-col2">
-                <h1>About Me</h1>
+                <h1 class="subtitle">About Me</h1>
+                <p>A motivated data and process management professional with experience in automation and robotic design, 
+                    data and research methodologies, operations, and business administration. Competency in financial accounting best practice,
+                    quantitative and qualitative research techniques, HTML, CSS, JAVASCRIPT, C# programming language.
+                    An effective team player with a proven peer-leadership and high-performance record.</p>
+
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('experience')" >Experience</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>Data Analytics</span><br>Analyzing Data</li>
+                            <li><span>Backend Development</span><br>Designing the backend codes</li>
+                            <li><span>Frontend Development</span><br>Designing the face of the software</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>May 2021 &dash; Oct 2021</span><br>Data Management and Robotic Process Automation Developer
+                                 (Intern) at Deloite Nigeria</li>
+                            
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>2018 &dash; 2022 </span><br>Industrial Mathematics&dash;Computer Science option at Covenant University</li>
+                            
+                        </ul>
+                    </div>
             </div>
 
         </div>
     </div>
+    
 
 </div>
+<script>
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab")
+    }
+</script>
 </body>
 </html>
